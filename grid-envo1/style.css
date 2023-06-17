@@ -1,0 +1,58 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.layout-item {
+  /* height: 400px; */
+}
+.layout-image{
+    /* width: 100%; */
+    /* height: 100%; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 200px 200px 100px;
+  /* khong bi scroll */
+  grid-template-columns: calc(50% - 4rem) calc(20% - 4rem) 30%; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  /* grid-column-gap: 4rem;
+  grid-row-gap: 2rem; */
+  grid-gap: 2rem 4rem;
+  grid-template-rows: 200px 600px;
+  /* nen fix width cua hinh - tranh tran screen */
+}
