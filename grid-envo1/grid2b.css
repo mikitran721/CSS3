@@ -1,0 +1,99 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+.post-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+    flex-shrink: 0;
+}
+.post-image--large{
+    height: auto;
+}
+.post-content{
+    font-weight: 400;
+    padding: 25px 0;
+    /* background-color: rgb(212, 209, 209); */
+    flex:1; /* chiem het khoang trong con lai*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.post-item{
+    display: flex;
+    flex-direction: column;
+}
+.post-title{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #3F2A78;
+}
+.post-time{
+    color: #ccc;
+    text-transform: uppercase;
+
+}
+.post-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; /*chieu cao deu*/
+    grid-gap: 25px;
+    padding: 25px;
+    grid-template-areas: 
+    "h1 h2 h3"
+    "h1 h4 h5" ;
+}
+.post-item:first-child{
+    grid-area:h1;
+}
+.post-item:nth-child(2){
+    grid-area:h2;
+}
+
+.post-item:nth-child(3){
+    grid-area:h3;
+}
+
+.post-item:nth-child(4){
+    grid-area:h4;
+}
+
+.post-item:nth-child(5){
+    grid-area:h5;
+}
