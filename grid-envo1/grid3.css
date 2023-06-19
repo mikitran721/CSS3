@@ -60,7 +60,9 @@ body {
 } */
 .image-item{
     border-radius: 10px;
-    height: 220;
+    height: 220px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+    /* bi cat mat bong - shadow */
 }
 .image-item img{
     width: 100%;
@@ -68,3 +70,30 @@ body {
     object-fit: cover;
     border-radius: inherit; /*ke thua cai ben ngoai*/
 } 
+@media screen and (max-width: 1023.98px) {
+    /* cho nguoi dung touch images */
+    .images{
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns:80%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        padding: 25px; /* them vao de hack shadow bi xem */
+        scroll-padding: 25px;
+        margin-left: -23px; 
+        /* fix shadow ko bi cat; bu ti le */
+    }
+    
+    .images {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    }
+    .images::-webkit-scrollbar {
+    display: none; /*an scroll bar*/
+    }
+
+    .image-item{
+        scroll-snap-align: end ; /*start | end | center */
+    }
+}
