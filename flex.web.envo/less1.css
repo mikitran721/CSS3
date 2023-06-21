@@ -75,3 +75,16 @@
 .container .item:nth-of-type(2){
     flex:1 2 300px;
 }
+.main2{
+    width: 400px;
+    height: 200px;
+    background-color: rgb(188, 211, 211);
+    /* color: #3eaded; */
+}
+.main2-item{
+    word-break: break-word;
+    /* hien thi tren 1 dong */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
